@@ -1,0 +1,6 @@
+
+/* Return from each static public-page showcase to the research homepage. */
+.project-return-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--brand-primary,#15803d);border-radius:8px;background:var(--brand-primary,#15803d);color:#fff;font-family:inherit;font-size:13px;font-weight:600;line-height:1.4;box-sizing:border-box;text-align:center;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.project-return-link:hover{background:var(--brand-primary-hover,#14532d);border-color:var(--brand-primary-hover,#14532d);color:#fff;text-decoration:none}
+.project-return-link:focus-visible{outline:3px solid #b77b0b;outline-offset:3px}
+@media(max-width:760px){.has-project-return>div{flex-wrap:wrap;row-gap:12px}.has-project-return>div>a:first-child{min-width:0;max-width:100%;flex-shrink:1}.has-project-return>div>a:first-child>div:last-child{min-width:0}.project-return-link{padding:10px 13px;font-size:12px}}

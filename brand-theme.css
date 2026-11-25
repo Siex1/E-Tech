@@ -1,0 +1,90 @@
+/* Exact values extracted from the existing public portal Tailwind theme.
+   brand-primary follows primary-container, which the existing CTAs use.
+   brand-primary-base preserves the separate Tailwind primary value. */
+:root {
+  --brand-primary: #15803d;
+  --brand-primary-base: #00652c;
+  --brand-primary-hover: #14532d;
+  --brand-primary-soft: #f0fdf4;
+  --brand-primary-border: #bbf7d0;
+  --brand-primary-dark: #166534;
+  --brand-primary-deep: #0f5128;
+  --brand-primary-fixed: #95f8a7;
+  --brand-secondary: #006398;
+  --bg-main: #ffffff;
+  --bg-soft: #f8fafc;
+  --bg-muted: #f1f5f9;
+  --bg-dark: #0f172a;
+  --text-primary: #0f172a;
+  --text-body: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-default: #e2e8f0;
+  --border-soft: #f1f5f9;
+  --border-strong: #cbd5e1;
+  --status-approved: #16a34a;
+  --status-approved-bg: #f0fdf4;
+  --status-completed: var(--status-approved);
+  --status-pending: #d97706;
+  --status-pending-bg: #fffbeb;
+  --status-review: #2563eb;
+  --status-review-bg: #eff6ff;
+  --status-revision: #ea580c;
+  --status-revision-bg: #fff7ed;
+  --status-rejected: #dc2626;
+  --status-rejected-bg: #fef2f2;
+  /* Neutral inactive/NA treatments reuse the existing text and canvas tokens. */
+  --status-inactive: #64748b;
+  --status-inactive-bg: #f1f5f9;
+  --focus-color: #0284c7;
+  --overlay-dark: rgba(15, 23, 42, .75);
+  --overlay-brand: rgba(21, 128, 61, .45);
+  --overlay-light: rgba(255, 255, 255, .90);
+  --overlay-gradient: linear-gradient(to bottom, rgba(15, 23, 42, .75), rgba(15, 23, 42, .65));
+  --on-dark-muted: #cbd5e1;
+  --shadow-soft: rgba(15, 23, 42, .04);
+  --shadow-medium: rgba(15, 23, 42, .10);
+  --shadow-strong: rgba(15, 23, 42, .25);
+  --white-soft: rgba(255, 255, 255, .08);
+  --white-border: rgba(255, 255, 255, .50);
+}
+
+body { background-color: var(--bg-main); color: var(--text-body); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+  outline: 3px solid var(--focus-color); outline-offset: 4px;
+}
+.bg-primary-container, .bg-brand-primary, .bg-emerald-700, .bg-green-700 { background-color: var(--brand-primary); }
+.hover\:bg-brand-primary-hover:hover, .hover\:bg-emerald-800:hover, .hover\:bg-green-800:hover { background-color: var(--brand-primary-hover); }
+.bg-brand-primary-soft, .bg-emerald-50, .bg-green-50 { background-color: var(--brand-primary-soft); }
+.text-primary-container, .text-brand-primary, .text-emerald-700, .text-green-700 { color: var(--brand-primary); }
+.border-brand-primary-border, .border-emerald-200, .border-green-200 { border-color: var(--brand-primary-border); }
+.border-emerald-600, .border-green-600 { border-color: var(--brand-primary); }
+.text-status-approved { color: var(--status-approved); }
+.bg-status-approved-bg { background-color: var(--status-approved-bg); }
+.text-status-pending { color: var(--status-pending); }
+.bg-status-pending-bg { background-color: var(--status-pending-bg); }
+.text-status-review { color: var(--status-review); }
+.bg-status-review-bg { background-color: var(--status-review-bg); }
+.text-status-revision { color: var(--status-revision); }
+.bg-status-revision-bg { background-color: var(--status-revision-bg); }
+.text-status-rejected { color: var(--status-rejected); }
+.bg-status-rejected-bg { background-color: var(--status-rejected-bg); }
+.text-status-inactive { color: var(--status-inactive); }
+.bg-status-inactive-bg { background-color: var(--status-inactive-bg); }
+.brand-hero { background-color: var(--bg-dark); }
+.brand-image-overlay { background: var(--overlay-gradient); }
+.brand-process { background-color: var(--brand-primary-soft); }
+.brand-requirements, .brand-faq { background-color: var(--bg-soft); }
+.brand-tracking { background-color: var(--bg-dark); color: var(--bg-main); }
+.brand-final-cta { background: var(--brand-primary-deep); color: var(--bg-main); }
+.brand-primary-button { background: var(--brand-primary); color: var(--bg-main); border-color: var(--brand-primary); }
+.brand-primary-button:hover { background: var(--brand-primary-hover); border-color: var(--brand-primary-hover); }
+.brand-secondary-button { background: transparent; color: var(--brand-primary); border: 1px solid var(--brand-primary); }
+.brand-dark-button { background: var(--bg-main); color: var(--brand-primary-hover); }
+.brand-dark-button:hover { background: var(--brand-primary-soft); }
+.brand-footer { background: var(--brand-primary-deep); color: var(--bg-main); border-top: 0; }
+.brand-footer :is(h3, strong, .text-text-headings) { color: var(--bg-main); }
+.brand-footer :is(p, li, .text-text-muted, .text-text-tertiary, .text-gray-500, .text-gray-600, .text-slate-500, .text-slate-600) { color: var(--on-dark-muted); }
+.brand-footer :is(.bg-canvas-soft, .bg-brand-primary-soft) { background: var(--white-soft); color: var(--bg-main); }
+.brand-footer a:hover { color: var(--brand-primary-fixed); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

@@ -1,0 +1,817 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>How It Works — e-Tech Victoria, Laguna</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-container": "#d3ffd5",
+            "on-primary-fixed-variant": "#005323",
+            "surface-bright": "#faf8ff",
+            "surface-container-high": "#e2e7ff",
+            "surface-container": "#eaedff",
+            "status-approved": "#16a34a",
+            "accent-azure": "#0284c7",
+            "canvas-muted": "#f1f5f9",
+            "on-secondary-fixed": "#001d31",
+            "tertiary-container": "#a95b00",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#93ccff",
+            "error-container": "#ffdad6",
+            "surface-dim": "#d2d9f4",
+            "text-tertiary": "#64748b",
+            "status-review": "#2563eb",
+            "primary": "#00652c",
+            "secondary": "#006398",
+            "on-primary": "#ffffff",
+            "text-body": "#1e293b",
+            "background": "#faf8ff",
+            "canvas-soft": "#f8fafc",
+            "surface": "#faf8ff",
+            "brand-primary-dark": "#166534",
+            "brand-primary-soft": "#f0fdf4",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#2f1500",
+            "primary-fixed": "#95f8a7",
+            "error": "#ba1a1a",
+            "accent-wheat": "#f5deb3",
+            "surface-container-highest": "#dae2fd",
+            "secondary-fixed": "#cce5ff",
+            "on-secondary-container": "#00476e",
+            "on-surface-variant": "#3f493f",
+            "status-revision": "#ea580c",
+            "brand-primary-border": "#bbf7d0",
+            "on-background": "#131b2e",
+            "accent-azure-soft": "#f0f9ff",
+            "primary-container": "#15803d",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#eef0ff",
+            "status-revision-bg": "#fff7ed",
+            "inverse-surface": "#283044",
+            "border-subtle": "#cbd5e1",
+            "tertiary": "#854600",
+            "border-hairline": "#e2e8f0",
+            "brand-primary-hover": "#14532d",
+            "on-tertiary-container": "#fff1e9",
+            "accent-azure-border": "#bae6fd",
+            "status-rejected-bg": "#fef2f2",
+            "text-muted": "#475569",
+            "on-tertiary-fixed-variant": "#6e3900",
+            "surface-tint": "#006d30",
+            "outline": "#6f7a6e",
+            "brand-primary-deep": "#0f5128",
+            "status-review-bg": "#eff6ff",
+            "on-primary-fixed": "#00210a",
+            "secondary-container": "#5bb8fe",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#79db8d",
+            "status-approved-bg": "#f0fdf4",
+            "tertiary-fixed-dim": "#ffb77d",
+            "surface-variant": "#dae2fd",
+            "text-headings": "#0f172a",
+            "on-secondary-fixed-variant": "#004b73",
+            "status-rejected": "#dc2626",
+            "on-surface": "#131b2e",
+            "inverse-primary": "#79db8d",
+            "surface-container-low": "#f2f3ff",
+            "on-error-container": "#93000a",
+            "outline-variant": "#becabc",
+            "status-pending-bg": "#fffbeb",
+            "status-pending": "#d97706",
+            "canvas-white": "#ffffff",
+            "tertiary-fixed": "#ffdcc3"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<link rel="stylesheet" href="portal-return.css"></head>
+<body class="bg-surface font-sans text-text-body antialiased selection:bg-brand-primary-border selection:text-brand-primary-deep min-h-screen flex flex-col justify-between">
+<!-- UNIFIED CIVIC HEADER -->
+<header class="has-project-return fixed top-0 left-0 right-0 w-full z-50 bg-canvas-white/95 backdrop-blur-xl border-b border-border-hairline shadow-[0_1px_8px_rgba(15,23,42,0.04)]">
+<div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-8 flex items-center justify-between gap-6">
+<!-- Dual Seals & Brand Lockup -->
+<a class="flex items-center gap-3.5" href="./official-public-portal.html"><div class="flex items-center gap-2"><img alt="Seal of the Municipality of Victoria, Laguna" class="w-9 h-9 rounded-full object-cover shrink-0 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa7wdShok8e5TWVyNwMuI_5Mic0J9NQfVxR9HKHCI5w94XqCafYfYPTr5p3lI_9UndLWOyPG3XcDQW0wHQ6ZTl8LpehpDspF4opBcNwbGGZ8lE9TdWmc-b_7a3qI4LohXIp4ir6saW9WJaG5Q4_h-7LmK_kGtCLYsxzJgeEVzUraBth4nFe8lZXfmq5kRlCJVF5FeBmltyUJ9AcKkFzKbwvBpUbelA3OxoFnkPjF-w0PZQf5HI-_E2CLc4yUshR0Fhrg"><img alt="Victoria BPLO Official Seal" class="w-9 h-9 rounded-full object-cover shrink-0 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOMQIydSM0zX-GqaUzqmE8bDnROWn_9I21yzN1UKzNjcrwvCVX7k85xsmGwqbLeT0EsLvhQMWAHjOciMV3ZkNBuEKyHuTKeWsGdv18dxoyG_5dzsBrpCajfyl2OZCJTV-WX4bTuTrdWtocvIcfxN2fq30lQvo2XIYTt0cyCsyz8E6PJKw4836oaPzYYVtTlIFFHUomUdBHlcPdHqnzpHzO5tEFzOq9HJJ-WU404Fdyo61GMFXe-YG7PbRr3oX6jXqdpw"></div><div class="flex flex-col justify-center"><div class="flex items-center gap-2"><span class="font-bold text-xl text-text-headings tracking-tight leading-tight">e-Tech</span><span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-primary-soft text-brand-primary-dark border border-brand-primary-border leading-none">BPLO</span></div><span class="text-xs text-text-muted font-medium tracking-wide">Municipality of Victoria, Laguna</span></div></a>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8"><a class="text-sm font-medium text-text-muted hover:text-brand-primary-dark transition-colors pb-1" data-path="home" href="./official-public-portal.html">Home</a><a class="text-sm font-medium text-text-muted hover:text-brand-primary-dark transition-colors pb-1" data-path="services" href="./business-permit-services.html">Services</a><a class="text-sm font-medium text-text-muted hover:text-brand-primary-dark transition-colors pb-1" data-path="requirements" href="./requirements-checklists.html">Requirements</a><a aria-current="page" class="text-sm font-semibold text-brand-primary-dark border-b-2 border-primary-container pb-1 transition-colors" data-path="how-it-works" href="./how-it-works.html">How It Works</a><a class="text-sm font-medium text-text-muted hover:text-brand-primary-dark transition-colors pb-1" data-path="faqs" href="./faq.html">FAQs</a></nav>
+<!-- Right Action CTA -->
+<div class="flex items-center gap-4">
+
+<a class="project-return-link" href="index.html" aria-label="Back to e-Tech project homepage">Back to Project</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface flex-1">
+<div class="flex flex-col w-full">
+<!-- 1. CIVIC HERO SECTION WITH TOWN HALL PHOTOGRAPHY & OVERLAY -->
+<section class="relative w-full overflow-hidden bg-text-headings text-on-primary">
+<!-- Photographic Background with Signature Dark Civic Gradient Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlUzIPeCJRzjPNTA_oUksoK6ajXGvNdj1eEhfVGlz8QCxLSWC6jnF830k6rKJoG_N15C6EYhNxqFoQfaeZG4lAGBidAzDPbu9kTb9BmgRbx9OjJs5piKCi-gxs6xygwpp3pWAj-tWOcYLqkaiVZRDZZpC6sb_mIS1WlN890tg1TZwx8AEhV31M8VRkrehoQu45En0HONgfpxeBtV-QtHAtvF--Hafo6nVPjFOJKM0HGYT_OAGZHXXlPJlPjlJImwO30g');"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-r from-[#0f172a]/95 via-[#0f172a]/90 to-[#166534]/90 mix-blend-multiply"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-t from-[#0f172a] via-transparent to-black/30"></div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-8 py-16 lg:py-24 flex flex-col justify-center min-h-[420px]">
+<div class="max-w-3xl space-y-4"><div class="space-y-3">
+  <span class="text-xs font-bold tracking-widest text-primary-fixed-dim uppercase block">
+    HOW IT WORKS
+  </span>
+  <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-on-primary tracking-tight leading-[1.1]">
+    How It Works
+  </h1>
+  <p class="text-lg sm:text-xl text-surface-container max-w-2xl font-normal leading-relaxed pt-1">
+    See how a business permit application moves from submission and review to BFP processing, Treasury, and permit release.
+  </p>
+</div></div>
+</div>
+</section>
+<!-- QUICK ANCHOR JUMP BAR -->
+<section class="sticky top-20 z-40 w-full bg-canvas-white border-b border-border-hairline shadow-sm">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">timeline</span>
+<span class="text-xs font-bold uppercase tracking-wider text-text-headings">Procedural Navigation:</span>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none text-xs font-medium">
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-brand-primary-soft text-text-body hover:text-brand-primary-dark transition-colors shrink-0" href="#stage-01">01 Submission</a>
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-brand-primary-soft text-text-body hover:text-brand-primary-dark transition-colors shrink-0" href="#stage-02">02 BPLO Review</a>
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-brand-primary-soft text-text-body hover:text-brand-primary-dark transition-colors shrink-0" href="#stage-03">03 Dept Review</a>
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-accent-azure-soft text-text-body hover:text-accent-azure transition-colors shrink-0" href="#stage-04">04 BFP</a>
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-brand-primary-soft text-text-body hover:text-brand-primary-dark transition-colors shrink-0" href="#stage-05">05 Assessment</a>
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-status-pending-bg text-text-body hover:text-status-pending transition-colors shrink-0" href="#stage-06">06 Treasury</a>
+<a class="px-3 py-1 rounded-full bg-surface-container-low hover:bg-brand-primary-soft text-text-body hover:text-brand-primary-dark transition-colors shrink-0" href="#stage-07">07 Release</a>
+</div>
+</div>
+</section>
+<!-- 2. EDITORIAL OVERVIEW & STATUTORY NOTICE -->
+<section class="w-full bg-canvas-white py-12 lg:py-16 border-b border-border-hairline">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<div class="lg:col-span-7 space-y-3">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Systematic Workflow</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-text-headings tracking-tight">
+                From application to permit.
+              </h2>
+<p class="text-base text-text-muted leading-relaxed max-w-2xl">
+                Your application moves through several verified review and processing stages before the official business permit can be released. Track every milestone transparently with real-time status notifications and synchronized department sign-offs.
+              </p>
+</div>
+<div class="lg:col-span-5 bg-canvas-soft border border-border-hairline p-5 sm:p-6 rounded-2xl shadow-sm">
+<div class="flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-accent-azure-soft text-accent-azure flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<div class="space-y-1.5">
+<span class="text-sm font-bold text-text-headings block">Statutory Routing Notice</span>
+<p class="text-xs sm:text-sm text-text-muted leading-relaxed">
+                    The exact requirements and reviewing offices may vary depending on your business activity, premises classification, physical location, and legal registration type (Sole Proprietorship, Corporation, Cooperative, or Partnership).
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SEVEN-STAGE PROCESS TIMELINE (ELEVATED CIVIC DESIGN) -->
+<section class="w-full bg-canvas-soft py-16 lg:py-24">
+<div class="max-w-4xl mx-auto px-6 lg:px-8">
+<div class="mb-14 text-center max-w-2xl mx-auto space-y-2">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Seven-Stage Milestone System</span>
+<h3 class="text-3xl font-bold text-text-headings tracking-tight">Unified Municipal Licensing Pipeline</h3>
+<p class="text-sm text-text-muted leading-relaxed">A fully audited procedural track from municipal portal intake to verified credential release.</p>
+</div>
+<!-- Connected vertical timeline spine -->
+<div class="relative ml-4 sm:ml-8 space-y-12 before:absolute before:left-[-1px] before:top-6 before:bottom-6 before:w-[2px] before:bg-brand-primary-border">
+<!-- STAGE 01 -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-01">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-brand-primary-dark text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                01
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-border-hairline shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-hairline pb-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider block">Intake &amp; Data Entry</span>
+<h4 class="text-xl font-bold text-text-headings">Submit your application</h4>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary-soft text-brand-primary-dark border border-brand-primary-border">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-primary-dark"></span> Online via e-Tech Portal
+                  </span>
+</div>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Complete your business information, provide the required details, and upload the necessary documentary attachments through e-Tech.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+<div class="flex items-center gap-2.5 bg-canvas-muted p-2.5 rounded-xl text-text-headings text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span>
+<span class="">Business details &amp; capital declaration</span>
+</div>
+<div class="flex items-center gap-2.5 bg-canvas-muted p-2.5 rounded-xl text-text-headings text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">badge</span>
+<span class="">Owner / Authorized representative info</span>
+</div>
+<div class="flex items-center gap-2.5 bg-canvas-muted p-2.5 rounded-xl text-text-headings text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">upload_file</span>
+<span class="">DTI/SEC/CDA, Lease, or Tax Declaration</span>
+</div>
+<div class="flex items-center gap-2.5 bg-canvas-muted p-2.5 rounded-xl text-text-headings text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_done</span>
+<span class="">Instant digital confirmation tracking</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 02 -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-02">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-brand-primary-dark text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                02
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-border-hairline shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-hairline pb-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider block">Frontline Verification</span>
+<h4 class="text-xl font-bold text-text-headings">BPLO reviews your application</h4>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary-soft text-brand-primary-dark border border-brand-primary-border">
+<span class="material-symbols-outlined text-[14px]">policy</span> Completeness Audit
+                  </span>
+</div>
+<p class="text-sm text-text-muted leading-relaxed">
+                  The Business Permits and Licensing Office checks the submitted application and documents for completeness before the application proceeds to the required reviewing offices.
+                </p>
+<div class="p-4 rounded-xl bg-canvas-soft border border-border-hairline space-y-2">
+<span class="text-xs font-bold uppercase tracking-wider text-text-muted block">Possible Evaluation Outcomes:</span>
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-status-approved-bg text-status-approved border border-brand-primary-border">
+<span class="w-1.5 h-1.5 rounded-full bg-status-approved"></span> Approved for Processing
+                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-status-revision-bg text-status-revision border border-orange-200">
+<span class="w-1.5 h-1.5 rounded-full bg-status-revision"></span> For Revision / Additional Requirement
+                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-status-rejected-bg text-status-rejected border border-red-200">
+<span class="w-1.5 h-1.5 rounded-full bg-status-rejected"></span> Rejected when applicable
+                    </span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 03 -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-03">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-brand-primary-dark text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                03
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-border-hairline shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="border-b border-border-hairline pb-4">
+<span class="text-xs font-bold text-primary uppercase tracking-wider block">Unified Clearances</span>
+<h4 class="text-xl font-bold text-text-headings">Applicable departments review the application</h4>
+<p class="text-sm text-text-muted leading-relaxed mt-1">
+                    After BPLO initial review, the application is routed simultaneously or sequentially to the municipal offices applicable to the business.
+                  </p>
+</div>
+<!-- Department tags -->
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">location_city</span> MPDC / Zoning
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">architecture</span> Engineering / OBO
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">health_and_safety</span> Health / Sanitation
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span> MENRO / Environmental
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">real_estate_agent</span> Municipal Assessor
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">home_work</span> Barangay Clearance
+                  </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-medium text-text-headings">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span> Market Office
+                  </span>
+</div>
+<!-- Department notices -->
+<div class="space-y-2 bg-canvas-soft p-4 rounded-xl border border-border-hairline text-xs text-text-muted leading-relaxed">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">verified</span>
+<span class=""><strong>Important:</strong> Only the departments applicable to the business are included in the review. Some offices may conduct physical inspections or request additional compliance documents before endorsement.</span>
+</div>
+<div class="flex items-start gap-2 text-text-body">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">low_priority</span>
+<span class=""><strong>Sequencing:</strong> Locational and zoning clearance is conducted prior to Engineering / OBO building safety evaluations.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 04 (BFP - EXTERNAL AGENCY PROCESS) -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-04">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-accent-azure text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                04
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-accent-azure-border shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-hairline pb-4">
+<div>
+<span class="text-xs font-bold text-accent-azure uppercase tracking-wider block">Bureau of Fire Protection</span>
+<h4 class="text-xl font-bold text-text-headings">BFP endorsement and fire safety processing</h4>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-accent-azure-soft text-accent-azure border border-accent-azure-border uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> EXTERNAL AGENCY PROCESS
+                  </span>
+</div>
+<p class="text-sm text-text-muted leading-relaxed">
+                  After the applicable municipal reviews are completed, the application proceeds to the Bureau of Fire Protection for the required fire safety process and endorsement.
+                </p>
+<p class="text-xs sm:text-sm text-text-body">
+                  Applicants may be required to complete BFP inspection, submit fire safety requirements, or comply with BFP instructions before the application can proceed.
+                </p>
+<!-- BFP Explicit Callout Box -->
+<div class="bg-accent-azure-soft border border-accent-azure-border p-4 rounded-xl space-y-2">
+<div class="flex items-start gap-2.5 text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px] text-accent-azure shrink-0 mt-0.5">policy</span>
+<span class="text-xs leading-relaxed">
+<strong>National Agency Coordination:</strong> The Bureau of Fire Protection (BFP) is a national agency; fire safety evaluations and physical inspections are coordinated directly with the Victoria Fire Station.
+                    </span>
+</div>
+<div class="flex items-start gap-2.5 text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px] text-accent-azure shrink-0 mt-0.5">receipt_long</span>
+<span class="text-xs leading-relaxed">
+                      Fire safety processing fees and Fire Safety Inspection Certificate (FSIC) release are administered under BFP statutory guidelines and cannot be paid directly through e-Tech.
+                    </span>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 05 -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-05">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-brand-primary-dark text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                05
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-border-hairline shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-hairline pb-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider block">Local Revenue Code</span>
+<h4 class="text-xl font-bold text-text-headings">Assessment is prepared</h4>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-primary-soft text-brand-primary-dark border border-brand-primary-border">
+<span class="material-symbols-outlined text-[14px]">calculate</span> Tax Order of Payment (TOP)
+                  </span>
+</div>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Once the required municipal reviews and BFP processing are completed, the applicable permit fees and statutory assessment are prepared.
+                </p>
+<div class="bg-canvas-soft border border-border-hairline p-4 rounded-xl text-text-muted text-xs leading-relaxed flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">account_balance</span>
+<p class="">
+                    Assessment computation depends on declared business classification, gross sales/capital investment, regulatory clearances, sanitary inspections, garbage fees, and municipal tax schedules. A formal Tax Order of Payment (TOP) is generated for Treasury settlement.
+                  </p>
+</div>
+</div>
+</div>
+<!-- STAGE 06 (TREASURY - EXTERNAL MUNICIPAL PROCESS) -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-06">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-status-pending text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                06
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-amber-200 shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-hairline pb-4">
+<div>
+<span class="text-xs font-bold text-status-pending uppercase tracking-wider block">Municipal Treasury</span>
+<h4 class="text-xl font-bold text-text-headings">Proceed to Treasury</h4>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-status-pending-bg text-on-tertiary-fixed-variant border border-amber-300 uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">payments</span> EXTERNAL MUNICIPAL PROCESS
+                  </span>
+</div>
+<p class="text-sm text-text-muted leading-relaxed">
+                  The applicant proceeds through the Municipal Treasury process for statutory payment and official receipt issuance.
+                </p>
+<!-- Harvest Gold Notice Box -->
+<div class="bg-status-pending-bg border border-amber-200 p-4 rounded-xl space-y-2">
+<div class="flex items-start gap-2.5 text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[20px] text-status-pending shrink-0 mt-0.5">account_balance_wallet</span>
+<div class="space-y-1">
+<span class="text-xs font-bold block text-text-headings uppercase tracking-wider">Settlement Policy Notice</span>
+<p class="text-xs leading-relaxed text-text-headings">
+                        Payment is handled outside e-Tech. Municipal taxes, regulatory clearance fees, and statutory charges are settled directly at the Municipal Treasury Cashier (Victoria Municipal Hall) or designated official municipal payment facilities. Online credit cards, GCash, and digital e-wallets are not collected through this portal.
+                      </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- STAGE 07 -->
+<div class="relative pl-8 sm:pl-12 scroll-mt-36" id="stage-07">
+<span class="absolute -left-5 top-0 w-10 h-10 rounded-xl bg-primary text-on-primary font-bold text-sm flex items-center justify-center shadow-md ring-4 ring-canvas-soft">
+                07
+              </span>
+<div class="bg-canvas-white p-6 sm:p-7 rounded-2xl border border-brand-primary-border shadow-sm hover:shadow-md transition-all space-y-4">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-hairline pb-4">
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider block">Credential Issuance</span>
+<h4 class="text-xl font-bold text-text-headings">Business permit is released</h4>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-status-approved-bg text-status-approved border border-brand-primary-border">
+<span class="w-1.5 h-1.5 rounded-full bg-status-approved animate-pulse"></span> Final Release Milestone
+                  </span>
+</div>
+<p class="text-sm text-text-muted leading-relaxed">
+                  After the required approvals and payment confirmation are completed, BPLO processes the business permit for official release.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+<div class="bg-canvas-soft border border-border-hairline p-3.5 rounded-xl text-center space-y-1">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<span class="text-xs font-bold text-text-headings block">Mayor's Permit</span>
+<span class="text-[11px] text-text-muted block">Officially sealed document</span>
+</div>
+<div class="bg-canvas-soft border border-border-hairline p-3.5 rounded-xl text-center space-y-1">
+<span class="material-symbols-outlined text-primary text-[24px]">qr_code_2</span>
+<span class="text-xs font-bold text-text-headings block">Secure QR Validation</span>
+<span class="text-[11px] text-text-muted block">Anti-counterfeiting token</span>
+</div>
+<div class="bg-canvas-soft border border-border-hairline p-3.5 rounded-xl text-center space-y-1">
+<span class="material-symbols-outlined text-primary text-[24px]">archive</span>
+<span class="text-xs font-bold text-text-headings block">Digital Archival</span>
+<span class="text-[11px] text-text-muted block">Annual renewal archive</span>
+</div>
+</div>
+<div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-border-hairline">
+<p class="text-xs text-text-muted">
+                    Released permits include an authenticated municipal QR code that can be scanned by the public and inspecting officers to verify validity.
+                  </p>
+<a class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-brand-primary-hover shrink-0" href="#tracking-preview">
+<span class="">View Live Tracker</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. LIVE CITIZEN TRACKER PREVIEW (Deep Slate Civic Trust Section) -->
+<section class="w-full bg-[#0f172a] text-on-primary py-20 scroll-mt-20" id="tracking-preview">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-8">
+<div class="max-w-4xl mx-auto space-y-8">
+<div class="text-center space-y-2">
+<span class="text-xs font-bold text-primary-fixed-dim uppercase tracking-widest">Real-Time Civic Visibility</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-on-primary tracking-tight">
+                How You See Your Progress
+              </h2>
+<p class="text-base text-surface-container max-w-xl mx-auto font-normal">Applicants track their live progress directly by signing in to their e-Tech citizen account. No public search bar is used, keeping business records secure.</p>
+</div>
+<!-- Dashboard Preview Card -->
+<div class="bg-canvas-white text-text-body border border-border-hairline rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6 overflow-hidden"><div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 gap-4 border-b border-border-hairline">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-brand-primary-soft text-brand-primary-dark flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-[24px]">pending_actions</span>
+      </div>
+      <div>
+        <h3 class="text-base font-bold text-text-headings tracking-tight uppercase leading-tight">APPLICATION PROGRESS</h3>
+        <p class="text-sm text-text-muted mt-0.5"><span class="font-medium text-text-headings">LAT CONVENIENCE STORE</span> is currently <span class="font-semibold text-primary">Under Department Review &amp; Clearances</span>.</p>
+      </div>
+    </div>
+    <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-accent-azure-soft text-accent-azure border border-accent-azure-border shrink-0 self-start sm:self-auto">
+      <span class="material-symbols-outlined text-[16px]">info</span>
+      <span class="">Auto-updates with status changes</span>
+    </div>
+  </div>
+
+  <div class="relative py-6 px-2 bg-gradient-to-r from-canvas-soft via-brand-primary-soft to-canvas-soft rounded-xl border border-border-hairline overflow-x-auto scrollbar-none">
+    <div class="min-w-[840px] relative">
+      <div class="absolute top-5 left-6 right-6 h-1 bg-border-hairline -z-0"></div>
+      <div class="absolute top-5 left-6 w-[28.5%] h-1 bg-primary -z-0"></div>
+      <div class="relative z-10 grid grid-cols-8 gap-2 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm ring-4 ring-canvas-white">
+            <span class="material-symbols-outlined text-[20px]">check</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-bold text-text-headings block leading-tight">Application Submitted</span>
+            <span class="text-[11px] font-semibold text-status-approved block">Completed</span>
+            <span class="text-[11px] text-text-tertiary block">Completed 7:57 PM</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm ring-4 ring-canvas-white">
+            <span class="material-symbols-outlined text-[20px]">check</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-bold text-text-headings block leading-tight">BPLO Review</span>
+            <span class="text-[11px] font-semibold text-status-approved block">Completed</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md ring-4 ring-brand-primary-border relative">
+            <span class="material-symbols-outlined text-[20px] animate-pulse">pending</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-bold text-text-headings block leading-tight">Department Clearances</span>
+            <span class="inline-flex items-center gap-1 text-[11px] font-bold text-primary block">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> In Progress
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2 opacity-60">
+          <div class="w-10 h-10 rounded-full bg-canvas-muted text-text-muted flex items-center justify-center ring-4 ring-canvas-white border border-border-hairline">
+            <span class="text-xs font-bold">04</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-medium text-text-muted block leading-tight">Assessment</span>
+            <span class="text-[11px] text-text-tertiary block">Pending</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2 opacity-60">
+          <div class="w-10 h-10 rounded-full bg-canvas-muted text-text-muted flex items-center justify-center ring-4 ring-canvas-white border border-border-hairline">
+            <span class="text-xs font-bold">05</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-medium text-text-muted block leading-tight">BFP / Fire Safety</span>
+            <span class="text-[11px] text-text-tertiary block">Pending</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2 opacity-60">
+          <div class="w-10 h-10 rounded-full bg-canvas-muted text-text-muted flex items-center justify-center ring-4 ring-canvas-white border border-border-hairline">
+            <span class="text-xs font-bold">06</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-medium text-text-muted block leading-tight">Treasury Payment</span>
+            <span class="text-[11px] text-text-tertiary block">Pending</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2 opacity-60">
+          <div class="w-10 h-10 rounded-full bg-canvas-muted text-text-muted flex items-center justify-center ring-4 ring-canvas-white border border-border-hairline">
+            <span class="text-xs font-bold">07</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-medium text-text-muted block leading-tight">Final BPLO Verification</span>
+            <span class="text-[11px] text-text-tertiary block">Pending</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2 opacity-60">
+          <div class="w-10 h-10 rounded-full bg-canvas-muted text-text-muted flex items-center justify-center ring-4 ring-canvas-white border border-border-hairline">
+            <span class="text-xs font-bold">08</span>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[11px] font-medium text-text-muted block leading-tight">Permit Release</span>
+            <span class="text-[11px] text-text-tertiary block">Pending</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-3 pt-2">
+    <h4 class="text-sm font-bold text-text-headings uppercase tracking-wider text-xs">Department Review</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
+      <div class="p-4 rounded-xl border border-brand-primary-border bg-brand-primary-soft space-y-1 shadow-sm">
+        <span class="text-xs text-text-muted block font-medium">Municipal Engineering Office</span>
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px] text-status-approved">check_circle</span>
+          <span class="text-sm font-bold text-text-headings block">Completed</span>
+        </div>
+      </div>
+      <div class="p-4 rounded-xl border border-accent-azure-border bg-accent-azure-soft space-y-1 shadow-sm">
+        <span class="text-xs text-text-muted block font-medium">Zoning / MPDC</span>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-accent-azure animate-pulse"></span>
+          <span class="text-sm font-bold text-accent-azure block">Under Review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-4 border-t border-border-hairline flex items-center gap-2 text-xs text-text-muted">
+    <span class="material-symbols-outlined text-[18px] text-accent-azure shrink-0">verified_user</span>
+    <span class="">Progress is updated automatically as your application moves through each stage.</span>
+  </div></div>
+</div>
+</div>
+</section>
+<!-- 5. APPLICANT REMINDERS / BEST PRACTICES -->
+<section class="w-full bg-canvas-white py-16 lg:py-20 border-b border-border-hairline">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-8">
+<div class="max-w-3xl mb-12 space-y-2">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Best Practices</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-text-headings tracking-tight">
+              Keep your application moving.
+            </h2>
+<p class="text-base text-text-muted">
+              Three practical reminders to ensure quick and smooth processing under R.A. 11032 statutory timelines.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-canvas-soft border border-border-hairline p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:-translate-y-1 transition-transform">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-brand-primary-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">document_scanner</span>
+</div>
+<span class="text-xs font-bold text-text-tertiary uppercase tracking-wider">Reminder 01</span>
+<h3 class="text-lg font-bold text-text-headings">Upload clear and correct documents</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Legible scans of business registration (DTI/SEC/CDA), barangay clearances, and proof of address prevent BPLO deficiency holds and instant resubmission requests.
+                </p>
+</div>
+<div class="pt-2 text-primary text-xs font-semibold flex items-center gap-1 border-t border-border-hairline">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">High-res PDF or JPG only</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-canvas-soft border border-border-hairline p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:-translate-y-1 transition-transform">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-accent-azure-soft flex items-center justify-center text-accent-azure">
+<span class="material-symbols-outlined text-[26px]">notifications_active</span>
+</div>
+<span class="text-xs font-bold text-text-tertiary uppercase tracking-wider">Reminder 02</span>
+<h3 class="text-lg font-bold text-text-headings">Check your application for remarks</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Log in regularly to view evaluator feedback, scheduled site inspection notices, or requested document revisions from municipal engineering, zoning, or sanitation units.
+                </p>
+</div>
+<div class="pt-2 text-accent-azure text-xs font-semibold flex items-center gap-1 border-t border-border-hairline">
+<span class="material-symbols-outlined text-[16px]">notifications</span>
+<span class="">SMS &amp; Email alerts active</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-canvas-soft border border-border-hairline p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow-sm hover:-translate-y-1 transition-transform">
+<div class="space-y-3">
+<div class="w-12 h-12 rounded-xl bg-status-pending-bg flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">hourglass_top</span>
+</div>
+<span class="text-xs font-bold text-text-tertiary uppercase tracking-wider">Reminder 03</span>
+<h3 class="text-lg font-bold text-text-headings">Complete external requirements promptly</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Attend to BFP fire safety instructions and proceed to the Municipal Treasury cashier upon assessment release to avoid municipal surcharge assessments or statutory delays.
+                </p>
+</div>
+<div class="pt-2 text-tertiary text-xs font-semibold flex items-center gap-1 border-t border-border-hairline">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span class="">Avoid late surcharges</span>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 rounded-xl bg-canvas-muted text-center max-w-2xl mx-auto border border-border-hairline">
+<p class="text-xs text-text-muted">
+              The exact process may vary depending on the business type, location, required inspections, applicable regulatory offices, and documents submitted.
+            </p>
+</div>
+</div>
+</section>
+<!-- 6. PREREQUISITES & NAVIGATION CROSS-LINKS -->
+<section class="w-full bg-canvas-soft py-16">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Left Block: Document Prep -->
+<div class="lg:col-span-6 bg-canvas-white p-6 sm:p-8 rounded-2xl border border-border-hairline shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-wider uppercase">Prerequisite Checklist</span>
+<h3 class="text-2xl font-bold text-text-headings">Prepare before you apply.</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Review the documents and prerequisites you may need before starting your business permit application. Having high-resolution digital copies saves processing time.
+                </p>
+<ul class="space-y-2.5 pt-2 text-text-headings text-sm">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="">Barangay Business Clearance (Victoria, Laguna)</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="">DTI Business Name / SEC Articles / CDA Certificate</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="">Contract of Lease or Real Property Tax Receipt</span>
+</li>
+</ul>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-primary-container text-on-primary text-sm font-semibold hover:bg-brand-primary-hover transition-colors shadow-sm" data-path="requirements" href="./requirements-checklists.html">
+<span class="">View Document Checklists</span>
+<span class="text-base leading-none">→</span>
+</a>
+</div>
+</div>
+<!-- Right Block: Quick Links Grid -->
+<div class="lg:col-span-6 bg-canvas-white p-6 sm:p-8 rounded-2xl border border-border-hairline shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<span class="text-xs font-bold text-secondary tracking-wider uppercase">Online Services Navigation</span>
+<h3 class="text-2xl font-bold text-text-headings">Need to start or manage an application?</h3>
+<p class="text-sm text-text-muted leading-relaxed">
+                  Select your required municipal service to proceed directly to the appropriate online form or status verification pipeline.
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a class="group p-3.5 rounded-xl bg-canvas-soft hover:bg-brand-primary-soft border border-border-hairline hover:border-brand-primary-border transition-all flex items-center justify-between" data-path="services" href="./business-permit-services.html">
+<div>
+<span class="text-sm font-bold text-text-headings group-hover:text-primary block">New Business Permit</span>
+<span class="text-xs text-text-muted">Fresh registration</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="group p-3.5 rounded-xl bg-canvas-soft hover:bg-brand-primary-soft border border-border-hairline hover:border-brand-primary-border transition-all flex items-center justify-between" data-path="services" href="./business-permit-services.html">
+<div>
+<span class="text-sm font-bold text-text-headings group-hover:text-primary block">Permit Renewal</span>
+<span class="text-xs text-text-muted">Annual re-validation</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="group p-3.5 rounded-xl bg-canvas-soft hover:bg-brand-primary-soft border border-border-hairline hover:border-brand-primary-border transition-all flex items-center justify-between" href="#tracking-preview"><div class="">
+  <span class="text-sm font-bold text-text-headings group-hover:text-primary block">Track in Account</span>
+  <span class="text-xs text-text-muted">Sign in to view progress</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+<a class="group p-3.5 rounded-xl bg-canvas-soft hover:bg-brand-primary-soft border border-border-hairline hover:border-brand-primary-border transition-all flex items-center justify-between" data-path="services" href="./business-permit-services.html">
+<div>
+<span class="text-sm font-bold text-text-headings group-hover:text-primary block">Closure / Retirement</span>
+<span class="text-xs text-text-muted">Official termination</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FINAL CALL TO ACTION (Deep Civic Green Banner) -->
+<section class="relative w-full bg-gradient-to-br from-primary-container to-brand-primary-deep text-on-primary py-16 lg:py-20 text-center overflow-hidden">
+<div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-8 flex flex-col items-center space-y-4">
+<div class="w-14 h-14 rounded-full bg-canvas-white/10 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[30px] text-primary-fixed-dim">verified</span>
+</div>
+<div class="max-w-2xl space-y-2">
+<h2 class="text-3xl sm:text-4xl font-bold text-on-primary tracking-tight">
+              Ready to start your business permit application?
+            </h2>
+<p class="text-base sm:text-lg text-surface-container font-normal leading-relaxed">
+              Prepare your documents and begin your business permit application through e-Tech today.
+            </p>
+</div>
+<!-- Button Cluster -->
+<div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-full bg-canvas-white text-brand-primary-deep text-sm font-bold hover:bg-canvas-soft transition-all shadow-lg active:scale-98" data-path="apply-online" href="./business-permit-services.html#service-new">
+              Apply Online →
+            </a>
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-full bg-canvas-white/10 hover:bg-canvas-white/20 text-on-primary text-sm font-semibold transition-colors backdrop-blur-sm border border-canvas-white/15" data-path="requirements" href="./requirements-checklists.html">
+              View Requirements
+            </a>
+</div>
+<!-- Statutory Charter Notice -->
+<div class="pt-6">
+<p class="text-xs text-surface-container tracking-wider uppercase">
+              Pamahalaang Bayan ng Victoria • Business Permit &amp; Licensing Office • Citizen's Charter Compliant
+            </p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- UNIFIED STATUTORY FOOTER -->
+<footer class="w-full bg-canvas-white border-t border-border-hairline mt-auto"><div class="max-w-[1440px] mx-auto px-6 lg:px-8 py-14"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-border-hairline"><div class="lg:col-span-4 flex flex-col gap-4"><a class="flex items-center gap-3" href="./official-public-portal.html"><div class="flex items-center gap-2"><img alt="Seal of the Municipality of Victoria, Laguna" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzlxDypFYaniut8jEG57UQGmH-BvTd0XMC9GNMJlB3V-ijdQmZssMVvhEGa7nrvTMjioswYIohaGMxPRR97yWXvEiDlDcCQZaX29QTU6I1F8wBuuJKfIIk6MPuXGjHkPt1heMM7kud9gTaTgX7uMNfEcMizM3rfzVYtFtTXAl62h8WdWCfvHTWtpH71q_5TCLdGv4RJ02mzOTxHdDlNxm_VVginsnNK4vp5cQMqDM3ebFRYoQxNXphYOWqME2Jbu1GFA"><img alt="Victoria BPLO Official Seal" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_7f7S6bCNc4H4PoCxJQPSiKpAXXopaUje0Meu6O-514IyYiWYslxyBQ5tUieKTOyHRZpN0nQHsvmrZWdHQO2XC88xAtB1CH8Q7wuMyr7Mbuv6MDyJ5H55sQdjn7TiNOKu4xa4BFWyIDBF0ApVSApBG6wHQxyOsixHuC9ylVRkyeRMeh3MJSRSxpDiS6IgzOPCymP8ugCCVGR0fVfDrJjMz7jzTZy7jD_tRYv2Bspohfuc64Kz3MX-a4cUOxI2kMrv8A"></div><div class="flex flex-col ml-1"><span class="text-lg font-bold text-text-headings leading-tight">e-Tech Victoria</span><span class="text-xs text-text-tertiary">Electronic Business Permits and Licensing System</span></div></a><p class="text-sm text-text-muted max-w-sm leading-relaxed">The official regulatory compliance and electronic business licensing portal of the Municipality of Victoria, Laguna. Facilitating statutory transparency, prompt government service, and streamlined ease of doing business.</p><div class="flex flex-wrap items-center gap-2 pt-1"><span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-low border border-border-hairline rounded-full text-xs font-semibold text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-status-approved"></span> ARTA COMPLIANT</span><span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-low border border-border-hairline rounded-full text-xs font-semibold text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-accent-azure"></span> DILG-DICT-DTI JMC 2016-01</span></div></div><div class="lg:col-span-2 flex flex-col gap-3"><h3 class="text-xs font-bold uppercase text-text-headings tracking-wider">Business Services</h3><ul class="flex flex-col gap-2.5 text-sm text-text-muted"><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">New Business Permit</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">Permit Renewal</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">Track Application Status</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">Business Closure / Retirement</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">Clearances &amp; Inspections</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-3"><h3 class="text-xs font-bold uppercase text-text-headings tracking-wider">Statutory Information</h3><ul class="flex flex-col gap-2.5 text-sm text-text-muted"><li class=""><a class="hover:text-primary transition-colors" data-path="requirements" href="./requirements-checklists.html">Checklist of Requirements</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="how-it-works" href="./how-it-works.html">Citizen's Charter</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">Schedule of Taxes &amp; Fees</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="faqs" href="./faq.html">Document FAQs</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="about" href="./official-public-portal.html#about-section">Zero-Contact Policy</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-3"><h3 class="text-xs font-bold uppercase text-text-headings tracking-wider">Portals &amp; Account</h3><ul class="flex flex-col gap-2.5 text-sm text-text-muted"><li class=""><a class="hover:text-primary transition-colors" data-path="sign-in" href="./official-public-portal.html#tracking-section">Applicant Login</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="apply-online" href="./business-permit-services.html#service-new">Create Business Account</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="sign-in" href="./official-public-portal.html#tracking-section">BPLO Staff Gateway</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="contact" href="mailto:bplo@victoria-laguna.gov.ph">Helpdesk &amp; Support</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="./business-permit-services.html">Verify Issued Permit</a></li></ul></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-tertiary"><div class="">© 2026 Municipality of Victoria, Laguna. Business Permit &amp; Licensing Office (BPLO). All Rights Reserved.</div><div class="flex flex-wrap items-center gap-4 text-text-muted"><span class="">Republic Act No. 11032</span><span class="">•</span><span class="">Data Privacy Act of 2012 (R.A. 10173)</span><span class="">•</span><a class="hover:underline hover:text-text-headings" data-path="privacy-policy" href="./official-public-portal.html#about-section">Privacy Notice</a><span class="">•</span><a class="hover:underline hover:text-text-headings" data-path="terms-of-service" href="./official-public-portal.html#about-section">Terms of Service</a></div></div></div></footer>
+
+
+
+
+
+
+
+
+
+
+</body></html>

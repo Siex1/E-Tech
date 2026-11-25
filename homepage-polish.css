@@ -1,0 +1,152 @@
+/* Homepage refinement: municipal photography, green identity, and clearer reading surfaces. */
+.research-site{--ui-navy:#173844;--ui-paper:#fbf8f1;--ui-blue:#eaf2f7;--ui-sand:#f3e7da;--ui-gold:#e5c66e;--design-paper:var(--ui-paper);--design-ink:#193b46;--design-muted:#4f6267;background:var(--ui-paper)}
+.research-site .site-header{background:#132f3a;border-bottom-color:#46646c}
+.research-site .brand{gap:12px}
+.research-site .brand-seals{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.research-site .brand-seals .brand-logo{width:40px;height:40px;background:#fff;object-fit:contain}
+.research-site .brand small{color:#d0dde0;font-size:11px}
+.research-site .nav nav{gap:19px}
+.research-site .nav nav a{color:#dae5e6}
+.research-site .nav nav a:hover,.research-site .nav nav a[aria-current]{color:#f1d789}
+.research-site .menu-toggle{border-color:#819ca3;color:#f1d789}
+
+/* One photographic opening; later sections keep solid, readable backgrounds. */
+.research-site .hero{position:relative;isolation:isolate;background:#142f38;color:#fff}
+.research-site .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,32,42,.96) 0%,rgba(15,39,47,.91) 43%,rgba(17,43,46,.58) 75%,rgba(17,43,46,.48) 100%),url('assets/images/victoria-hall.webp') center 48%/cover no-repeat}
+.research-site .hero-grid{grid-template-columns:1.12fr 1fr;gap:48px;padding-top:58px;padding-bottom:42px}
+.research-site .hero h1{font-size:clamp(34px,3.2vw,48px);line-height:1.15;color:#fffdf5;margin-bottom:24px}
+.research-site .hero em{color:#edd58e}
+.research-site .hero .lead{color:#dfebed;line-height:1.8;margin-bottom:26px}
+.research-site .hero .resource-actions .btn-white{background:var(--ui-gold);border-color:var(--ui-gold);color:#163732}
+.research-site .hero .resource-actions .btn-white:hover{background:#f2dca0;border-color:#f2dca0}
+.research-site .hero .resource-actions .btn-outline{background:#173b46;border-color:#8aa9ae;color:#f7faf6}
+.research-site .hero .resource-actions .btn-outline:hover{background:#28515b;border-color:#c1d0ca}
+.research-site .hero :is(a,button,summary):focus-visible{outline-color:#f0d98e}
+.research-site .hero-meta{color:#d0e0e3;border-color:#718f92;margin-top:28px;padding-top:20px;font-size:12px}
+.research-site .hero-media{box-shadow:0 16px 36px rgba(0,0,0,.22);border-radius:12px}
+.research-site .hero-media>img{aspect-ratio:auto;object-fit:contain}
+.research-site .preview-toolbar{padding:14px 20px}
+.research-site .hero-media figcaption{padding:18px 20px;background:#164c3b}
+.research-site .journey-wrap{padding-bottom:32px}
+.research-site .journey-wrap .permit-journey{background:#fbf8ef;border:0;border-radius:12px;padding:23px 28px}
+.research-site .permit-journey li>span{background:#e9dfbf;color:#574622}
+.research-site .permit-journey strong{color:#21483c}
+.research-site .permit-journey p,.research-site .permit-journey .journey-note{color:#52635c}
+
+.research-site .section{padding-block:72px}
+.research-site .section-head h2{color:#1d3d49}
+.research-site .section-index{background:#e4ecec;color:#315463}
+.research-site #overview{background:#fbf8f1}
+.research-site .overview-layout{gap:40px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.research-site .overview-photo{box-shadow:none;border:1px solid #d8dbce;border-radius:12px;background:#fffdf7}
+.research-site .overview-photo img{aspect-ratio:4/3;object-position:center}
+.research-site .overview-photo figcaption{padding:18px 22px}
+.research-site .overview-photo figcaption strong{color:#224e3b}
+.research-site .overview-photo figcaption span{color:#596960}
+.research-site .body-copy p{color:#4f6267}
+.research-site .fact-grid{border-color:#d2d7cb;gap:20px 28px}
+.research-site .fact-grid dt{color:#52636a}
+.research-site .fact-grid dd{color:#244555}
+.research-site .overview-objectives{background:transparent;border-color:#d8d8c9;margin-top:40px;padding-top:36px}
+.research-site .overview-objectives .general{background:#204b59;box-shadow:none;padding:28px}
+.research-site .overview-objectives .general h4{color:#fffdf4;font-size:25px}
+.research-site .overview-objectives .general p{color:#dbe8eb}
+.research-site .objective-list article{background:#f0f4f5;box-shadow:none}
+.research-site .objective-list h4{color:#274f60}
+.research-site .objective-list p{color:#4c616b}
+
+.research-site #team{background:#f0ede5}
+.research-site #team .person{box-shadow:none;border:1px solid #d9ddd2;border-radius:12px}
+.research-site #team .person-info{background:#fffdf8}
+.research-site #team .person-adviser .person-info{background:#e3edf0}
+.research-site #team .person h3{color:#214551}
+.research-site #team .person p,.research-site .team-context{color:#4f6267}
+
+.research-site #problem{background:var(--ui-sand);color:#443e34}
+.research-site #problem .section-head p{color:#65594b}
+.research-site #problem .section-index{background:#e4cbb0;color:#674520}
+.research-site #problem .detail-card{padding:26px;background:#fffaf2;border:1px solid #d7c5b0;border-radius:12px;box-shadow:none}
+.research-site #problem .detail-card h3{color:#705034}
+.research-site #problem .detail-card p{color:#635a4d}
+.research-site #problem #objectives{background:transparent;border-top-color:#cdb89f;scroll-margin-top:100px}
+.research-site #problem #objectives>.section-head h3{color:#705034}
+
+.research-site #methodology{background:var(--ui-blue)}
+.research-site .method-intro{background:#f8fbfd;border:1px solid #cedde5;padding:26px;box-shadow:none}
+.research-site .method-intro h3,.research-site #methodology .subhead{color:#285064}
+.research-site .method-intro p,.research-site .study-design-grid p{color:#476171}
+.research-site .phase-grid b{background:#2c6075;color:#fff}
+.research-site .phase-grid strong{color:#244e61}
+.research-site .phase-grid span{color:#476171}
+.research-site .phase-grid>li:not(:last-child):before{background:#adc5d1}
+.research-site .study-design-grid{border-color:#bdcfd8}
+.research-site .study-design-grid h3{color:#285064}
+.research-site .respondent-panel{background:#dce9f0}
+.research-site .respondent-panel h3,.research-site .respondent-breakdown dd{color:#214b60}
+.research-site .respondent-panel p,.research-site .respondent-breakdown dt{color:#3f5e6f}
+
+.research-site #features{background:#153e33}
+.research-site #features .section-head h2{color:#fff9e9}
+.research-site #features .section-head p{color:#d5e4d8}
+.research-site .features-grid{gap:20px}
+.research-site .features-grid article{background:#214d43;border:1px solid #547467;border-radius:12px;box-shadow:none;padding:26px}
+.research-site .features-grid p{color:#d9e8de}
+.research-site .feature-symbol{color:#ecd18a;margin-bottom:18px}
+.research-site .interface-preview{box-shadow:none;border-color:#829b89}
+.research-site .interface-preview:hover{box-shadow:none;border-color:#e7cd88}
+.research-site .interface-copy .interface-role{background:#214c4d;border-color:#8ca9a0;color:#f2dfa6}
+.research-site .project-scope{background:#f4f1e7;border:0;color:#284b41}
+.research-site .project-scope h3{color:#284b41}
+
+.research-site .results-section{background:#fcfaf5}
+.research-site .results-tabs:not([hidden]){background:#e7eef1;border-color:#b5c8d1}
+.research-site .results-tabs button{color:#305264}
+.research-site .results-tabs button span{color:#4b6574}
+.research-site .results-tabs button[aria-selected="true"]{background:#214e62;border-color:#214e62;color:#fff;box-shadow:none}
+.research-site .results-tabs button[aria-selected="true"] span{color:#dce8ee}
+.research-site .results-tabs button:hover:not([aria-selected="true"]){background:#f6f9fa}
+.research-site .evaluation-highlight{background:#214e62;color:#f8faf7}
+.research-site .evaluation-highlight dt{color:#d8e8ee}
+.research-site .results-switcher-enabled .evaluation-highlight>dl{border-color:#83a6b2}
+.research-site .evaluation-criteria li{background:#e5eef3;color:#31576b}
+.research-site .results-table-wrap{background:#fffdf8;border-color:#c8d5db}
+.research-site .results-table caption{background:#edf2f4;color:#3c5e70}
+.research-site .results-table thead th{background:#dfeaf0;color:#294f64}
+.research-site .results-table tbody tr:nth-child(even){background:#f2f6f7}
+.research-site .results-table td,.research-site .results-table tbody th{color:#345765;border-color:#dbe3e7}
+.research-site .results-table tfoot{background:#dfeaf0;color:#244c60}
+.research-site .results-table tfoot th,.research-site .results-table tfoot td{border-top-color:#b9cdd7}
+.research-site .results-section .findings-note{background:#f3ead8;color:#584a30}
+.research-site .results-section .findings-note h3{color:#654c27}
+.research-site .results-section .findings-note p{color:#65573e}
+
+.research-site .links-section{background:#eaf0f2}
+.research-site .resource-card{background:#fffdf8;border:1px solid #c9d5d9;box-shadow:none;padding:28px}
+.research-site .resource-heading{display:flex;align-items:center;gap:14px;margin-bottom:16px;min-width:0}
+.research-site .resource-heading .resource-icon{width:28px;height:28px;flex-shrink:0;margin:0;background:transparent;border-radius:0;color:#345f70}
+.research-site .resource-heading h3{font-size:22px;line-height:1.35;margin:0;color:#254a59}
+.research-site .resource-card>p{color:#4e646e;max-width:56ch;margin-bottom:24px}
+.research-site .resource-platform{color:#526b77}
+.research-site .resource-card:not(.resource-card--live) .btn{border-color:#91a8b1;color:#294f60}
+.research-site .resource-card:not(.resource-card--live) .btn:hover{background:#e8f0f4;border-color:#5b8193}
+.research-site .resource-card--live{background:#eef6e9;border-color:#b5cba9}
+.research-site .resource-card--live .resource-heading h3,.research-site .resource-card--live .resource-icon{color:#265c3d}
+.research-site .showcase-panel{background:#fffdf8;border:1px solid #ccd7d7;border-radius:12px;box-shadow:none}
+.research-site .gallery-copy{padding:28px}
+.research-site .gallery-copy h3{font-size:26px;color:#254c5b}
+.research-site .gallery-copy p{color:#4b646f}
+.research-site .links-context{color:#4f6671}
+.research-site #showcase{background:transparent;color:#254a59}
+.research-site #showcase .section-head p{color:#4f6671}
+.research-site #showcase .source-note{color:#4f6671!important}
+
+@media(max-width:1150px){.research-site .hero-grid{gap:32px}.research-site .nav nav{background:#173844}}
+@media(max-width:760px){
+ .research-site .brand{gap:8px}.research-site .brand-seals{gap:5px}.research-site .brand-seals .brand-logo{width:34px;height:34px}.research-site .brand small{font-size:9px;letter-spacing:.025em}.research-site .nav{gap:12px}
+ .research-site .hero::before{background:linear-gradient(rgba(12,32,42,.94),rgba(17,43,46,.87)),url('assets/images/victoria-hall-mobile.webp') center/cover no-repeat}
+ .research-site .hero-grid{grid-template-columns:1fr;padding-top:36px;padding-bottom:28px;gap:24px}.research-site .hero h1{font-size:clamp(31px,7.9vw,40px);line-height:1.16;margin:0}.research-site .hero .lead{font-size:16px;margin:0}.research-site .hero-meta{margin-top:0;color:#d0e0e3}
+ .research-site .hero-media{margin-top:0}.research-site .hero-media figcaption{padding:16px}.research-site .journey-wrap{padding-bottom:28px}.research-site .journey-wrap .permit-journey{padding:20px 22px}
+ .research-site .section{padding-block:56px}.research-site .overview-layout{grid-template-columns:1fr;gap:28px}.research-site .overview-objectives{margin-top:32px;padding-top:28px}.research-site .overview-objectives .general{padding:25px}.research-site .overview-objectives .general h4{font-size:23px}
+ .research-site #problem .detail-card{padding:24px}.research-site .method-intro{padding:24px}.research-site .resource-card{padding:24px}.research-site .resource-heading{gap:12px}.research-site .resource-heading h3{font-size:21px}.research-site .gallery-copy{padding:24px}
+}
+@media(max-width:359px){.research-site .brand-seals .brand-logo{width:30px;height:30px}.research-site .brand strong{font-size:20px}}

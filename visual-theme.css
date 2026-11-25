@@ -1,0 +1,53 @@
+/* Shared e-Tech design: municipal greens, clear type, and purposeful surfaces. */
+@font-face{font-family:Ubuntu;src:url('assets/fonts/Ubuntu-R.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Ubuntu;src:url('assets/fonts/Ubuntu-M.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Ubuntu;src:url('assets/fonts/Ubuntu-B.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+:root{--design-forest:#153e2e;--design-paper:#f2f3e8;--design-sage:#dbe7d3;--design-sand:#e8e4cf;--design-ink:#193e2c;--design-muted:#485f47;--focus-color:#a36e12}
+html{scrollbar-color:#728e6c #e8eedf;scrollbar-width:thin}
+::selection{background:#d8bb75;color:#123a28}
+input,textarea{caret-color:#245b35}
+:is(h1,h2,h3,h4){text-wrap:balance}
+:where(p){text-wrap:pretty}
+a,button,summary,input{touch-action:manipulation}
+:where(a,button,summary,input):focus-visible{outline:3px solid var(--focus-color);outline-offset:5px}
+.link-arrow{width:21px;height:21px;flex-shrink:0}
+.skip-link:not(:focus){clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0}
+.back-to-top{background:#153e2e;color:#efdfb5;border:1px solid #9eb492;border-radius:4px;box-shadow:none}
+.back-to-top svg{width:22px;height:22px}
+.portal-site{background:#e7edde;color:var(--design-ink)}
+body.portal-site,body.portal-site :is(h1,h2,h3,h4,p,a,button,input,summary){font-family:Ubuntu,sans-serif}
+.portal-header{background:var(--design-forest);border-bottom:1px solid #557252;box-shadow:none}
+.portal-brand strong{color:#f5f3e6;font-weight:500}
+.portal-brand small{color:#c3d3bd}
+.portal-brand-mark{background:transparent;color:#e7d49c;border:1px solid #829d7a;border-radius:4px;font-size:27px;font-weight:500}
+.portal-brand strong>span{color:#d6c78f!important}
+.portal-nav a{color:#d2dfcc;font-size:14px;font-weight:400}
+.portal-nav a:hover,.portal-nav a[aria-current]{color:#efdb9e}
+.portal-nav a[aria-current]{border-color:#dfc588;font-weight:500}
+.portal-live{background:#e7d49c;color:#153e2e;border-radius:4px;font-weight:500}
+.portal-live:hover{background:#f0e1ba;color:#153e2e}
+.portal-menu-toggle{background:transparent;color:#e7d49c;border-color:#78916b;border-radius:4px;font-family:Ubuntu,sans-serif;font-weight:500}
+.showcase-context{background:#e3ead8;border-bottom-color:#c0cfb3}
+.showcase-context-inner{color:#365333;font-family:Ubuntu,sans-serif;font-size:13px}
+.showcase-context-inner strong{font-weight:500}
+.portal-site main{background-color:#e7edde}
+.portal-site main section.bg-canvas-white{background-color:#f2f3e8}
+.portal-site main section.bg-canvas-soft{background-color:#e0ead6}
+.portal-site main section.bg-canvas-muted{background-color:#dbe5cf}
+.portal-site .brand-process{background:#dbe7d3}
+.portal-site .brand-requirements,.portal-site .brand-faq{background:#e3ebd9}
+.portal-site .brand-tracking,.portal-site .brand-final-cta{background:var(--design-forest)}
+.portal-site :is(.brand-primary-button,.brand-dark-button){border-radius:4px;box-shadow:none}
+.portal-site .transaction-card{background:#f4f6ec;border:1px solid #bacbb0;border-radius:12px;box-shadow:none}
+.portal-site .transaction-card:hover{border-color:#668a5d;box-shadow:none}
+.portal-site .accordion-item{background-color:#f4f6ec;border-color:#bacbb0;box-shadow:none}
+.portal-site .page-wayfinding{background:#d5e2c8;border-top-color:#aabd9e}
+.portal-site .page-wayfinding-inner{font-family:Ubuntu,sans-serif}
+.portal-site .page-wayfinding a{color:#245435}
+.portal-site .page-wayfinding small{color:#46613e}
+.portal-site .brand-footer{background:#103423}
+.portal-site .faq-item{border-radius:0;padding-left:16px;padding-right:16px}
+.portal-site .faq-item:nth-child(odd){background:#eff3e6}
+.portal-site .faq-item:has(button[aria-expanded="true"]){background:#dbe8cd}
+@media(max-width:1100px){.portal-site .portal-nav{background:var(--design-forest);border-bottom-color:#66845d}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
