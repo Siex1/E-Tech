@@ -1,19 +1,16 @@
 # E-Tech: A Centralized Business Process and Licensing System for the Municipality of Victoria, Laguna
 
-> **Undergraduate Capstone Research Repository — College of Computer Studies**  
-> **Laguna State Polytechnic University — Santa Cruz Main Campus**  
-> **Evaluation Submission Account:** [`teamccs-git`](https://github.com/teamccs-git)
+![Municipality of Victoria seal](static/assets/landing/optimized/asset-07-80.webp) ![BPLO emblem](static/assets/landing/optimized/asset-26-80.webp)
 
-[![LSPU CCS](https://img.shields.io/badge/LSPU-College_of_Computer_Studies-163D2B)](https://lspu.edu.ph/)
-![Research](https://img.shields.io/badge/Research-Digital_Government-275F49)
-![Python](https://img.shields.io/badge/Application-Python-3776AB)
-![Supabase](https://img.shields.io/badge/Database-Supabase_PostgreSQL-237C60)
-![TAM](https://img.shields.io/badge/TAM-4.23_of_5-275F49)
-![Testing](https://img.shields.io/badge/Testing-31_of_31_passed-275F49)
+**Undergraduate capstone research repository**<br>
+Bachelor of Science in Information Technology · College of Computer Studies<br>
+Laguna State Polytechnic University — Santa Cruz Main Campus
 
-**[Research Website](https://siex1.github.io/E-Tech/)** · **[Read Manuscript](https://siex1.github.io/E-Tech/manuscript-viewer.html)** · **[System Demonstration](https://drive.google.com/drive/folders/1NjH7QuwroE372udeUx_dCu-ORaLmgbN7)**
+![Python](https://img.shields.io/badge/Python-3.12-3776AB) ![Supabase](https://img.shields.io/badge/Database-Supabase_PostgreSQL-237C60) ![OCR](https://img.shields.io/badge/Document_AI-FastAPI-00786D) ![TAM](https://img.shields.io/badge/User_evaluation-4.23_of_5-275F49) ![Testing](https://img.shields.io/badge/Manuscript_test_cases-31_of_31_passed-275F49)
 
-[Overview](#research-context-and-abstract) · [Features](#system-features) · [Architecture](#architecture-and-technology) · [Workflow](#permit-processing-and-responsibilities) · [Repository Guide](#repository-guide) · [Research Findings](#-summary-of-research-findings--empirical-evaluation) · [Team](#-research-proponents--advisory) · [Deliverables](#-official-project-links--deliverables)
+[Railway address · returned 404](https://etech-victoria.up.railway.app/) · [Documentation index](docs/README.md) · [Submission checklist](docs/SUBMISSION_CHECKLIST.md)
+
+**Contents** · [Abstract](#research-context-and-abstract) · [Privacy](#academic-showcase-and-privacy) · [Features](#system-features) · [Architecture](#architecture-and-technology) · [Workflow](#permit-processing-and-responsibilities) · [Setup](#source-and-local-execution) · [Results](#research-findings) · [Screenshots](#system-screenshots) · [Credits and links](#proponents-and-deliverables)
 
 ---
 
@@ -21,9 +18,9 @@
 
 A business permit in Victoria passes through several offices. Applicants may supply the same business details on a form and in supporting certificates. For staff, finding which office still owes an inspection or clearance requires following one application across several decisions. E-Tech brings the submission, supporting files, office decisions, assessment and permit record together. Applicants can follow a case or correct an item online. Staff can see the evidence behind a decision and the steps still outstanding. OCR suggests entries for review. Treasury collection and fire clearance remain municipal transactions outside the portal.
 
-This repository publishes the **academic research website**: the project overview, research team, interface showcase, evaluation findings, and 350-page watermarked manuscript viewer.
+## Academic showcase and privacy
 
----
+This edition supports academic evaluation and archiving. The gallery uses demonstration screens and aggregate findings. Share only sanitized records with evaluators. Applicant identifiers, signatures, uploaded documents, receipts and private storage links belong in restricted systems. Keep credentials in local configuration or the host secret store. The repository is private and contains historical material outside this edition. Wider distribution requires a separate review of the full repository and its history. See the [security guide](docs/SECURITY_DOCUMENTATION.md) and the [Philippine Data Privacy Act of 2012](https://privacy.gov.ph/data-privacy-act/).
 
 ## System features
 
@@ -35,8 +32,6 @@ This repository publishes the **academic research website**: the project overvie
 | Report generation | BPLO selects filters, previews the matching records and exports a report. |
 | Document verification | Document-specific checks compare evidence with the application. BPLO reviews discrepancies and can return individual requirements for correction. |
 | Optical character recognition | A worker extracts fields from supported uploads. Applicants review suggested values and correct them before submitting. |
-
----
 
 ## Architecture and technology
 
@@ -59,10 +54,9 @@ flowchart TD
 | Main server | Python HTTP handlers validate sessions, dispatch routes and coordinate transactions. |
 | Data | Supabase Auth identifies accounts. PostgreSQL stores processing state. Private Storage holds documents and inspection evidence. |
 | Document processing | Tesseract, PaddleOCR and TrOCR have engine-specific dependencies. A document flag controls whether the worker calls FastAPI. |
-| Hosting and presentation | GitHub Pages publishes this research website at https://siex1.github.io/E-Tech/. The operational application is hosted separately. |
+| Hosting and presentation | Railway is the supplied application host. Cloudflare appears in the optional custom-domain runbook. GitHub Pages is a separate academic publishing surface. The supplied Railway address and the previously associated Pages address both returned 404 during submission review. |
 
-
----
+[Deployment topology, component boundaries and OCR sequence](docs/SYSTEM_ARCHITECTURE.md)
 
 ## Permit processing and responsibilities
 
@@ -81,37 +75,71 @@ For a new permit, the applicant registers, uploads requirements, reviews the for
 | Market Office | Market-related review when assigned |
 | BFP and Municipal Treasury | External fire clearance and payment collection respectively. BPLO records the applicable evidence. |
 
+[New, renewal, closure, revision, assessment, release and public verification procedures](docs/SYSTEM_DOCUMENTATION.md)
 
----
+## Source and local execution
 
-## Repository Guide
-
-| Location | Contents |
-| --- | --- |
-| `index.html` | Main research website |
-| `README.md` | Project overview, findings, team, and academic deliverables |
-| `manuscript-viewer.html` | Manuscript reader entry point, retaining the shared URL |
-| `assets/css/` | Website stylesheets |
-| `assets/js/` | Website interaction scripts |
-| `assets/pages/` | Public portal, permit services, requirements, process guide, and FAQ pages |
-| `assets/images/` | Municipal seals, team portraits, photographs, and system screenshots |
-| `assets/fonts/` | Local fonts and license |
-| `assets/manuscript-pages/` | Watermarked manuscript page previews |
-| `assets/manuscript-viewer.css` and `assets/manuscript-viewer.js` | Manuscript reader styling and behavior |
-
-### Local Preview
-
-```powershell
-git clone https://github.com/Siex1/E-Tech.git
-cd E-Tech
-python -m http.server 8080
+```text
+main.py                    Application entry point
+backend/                   HTTP handlers, authorization, rules, OCR and reporting
+static/                    Browser templates, styles, scripts and images
+templates/                 Server-side project templates
+database/                  Numbered SQL history and maintenance scripts
+supabase/migrations/       Timestamped migrations
+services/document-ai/      Optional private FastAPI service
+scripts/                   Operations and verification utilities
+tests/                     Unit, fixture and browser tests
+docs/                      Academic guides and engineering evidence
 ```
 
-Open **http://localhost:8080**. The research website requires no build step; Python provides the optional local preview server.
+```powershell
+git clone https://github.com/tiennito/BPLO_System.git
+cd BPLO_System
+# To evaluate PR #67 before it merges, run these two commands here:
+# git fetch origin refs/pull/67/head
+# git switch --detach FETCH_HEAD
+py -3.12 -m venv .venv-app
+.\.venv-app\Scripts\python.exe -m pip install -r requirements.txt
+Copy-Item .env.example .env
+# Configure the isolated database and keys using the installation guide before starting.
+.\.venv-app\Scripts\python.exe main.py
+```
 
-### GitHub Pages
+Open `http://127.0.0.1:8000`. The [installation guide](docs/INSTALLATION_GUIDE.md) covers the database baseline, migration order, environment, OCR service, tests and local prerequisites.
 
-Publish from **main → /(root)** through **Settings → Pages**. The website address is **https://siex1.github.io/E-Tech/**. Keep the `.nojekyll` marker and relative asset paths when deploying.
+## Research findings
+
+| Measure | Manuscript result |
+|---|---|
+| Black-box functional testing | 10 testers, 31 cases across six features, 31 passed |
+| User evaluation | 160 respondents, 18 statements each, 2,880 ratings |
+| Combined weighted mean | 4.23 / 5, SD 0.75, Strongly Agree |
+
+These results describe the cases tested and the respondents surveyed. [Feature results, group sizes and applicant interpretation discrepancy](docs/RESEARCH_EVALUATION.md)
+
+## System screenshots
+
+![Public landing page](docs/assets/screenshots/public/public-permit-portal.png)
+
+*Figure 1. The public portal introduces permit services and provides entry points for applicants.*
+
+![Report preview](docs/assets/screenshots/bplo-staff-admin/report-preview.png)
+
+*Figure 2. BPLO can preview the report before exporting it.* [Role-based screenshot gallery](docs/SYSTEM_SCREENSHOTS.md)
+
+## Proponents and deliverables
+
+**Research proponents** · Jasmine L. Geronimo · Sebastien B. Hernandez · Rickssie G. Hubahib<br>
+**Capstone adviser** · Gener F. Mosico, MSIT
+
+| Deliverable | Access |
+|---|---|
+| Application and source code | [Railway address · 404 at verification](https://etech-victoria.up.railway.app/) · [GitHub repository](https://github.com/tiennito/BPLO_System) · [Source and API guide](docs/SOURCE_CODE_GUIDE.md) |
+| Technical documentation | [Diagram index and data dictionary](docs/README.md) |
+| User documentation | [Four role manuals](docs/user-manual/README.md) · [Screenshots](docs/SYSTEM_SCREENSHOTS.md) |
+| Operations | [Local installation](docs/INSTALLATION_GUIDE.md) · [Railway deployment and maintenance](docs/DEPLOYMENT_GUIDE.md) |
+| Academic materials | Aggregate [research results](docs/RESEARCH_EVALUATION.md). Full manuscript publication approval was unavailable. The [previously associated Pages address](https://siex1.github.io/bplo-system/) returned 404. |
+| Multimedia | [Project promotional video](static/assets/landing/etech-promo.mp4). A public full-system demonstration recording has not been confirmed. |
 
 ---
 
@@ -149,31 +177,7 @@ The instrument covered **Quality Factors**, **Perceived Ease of Use**, **Perceiv
 
 The overall result combines **2,880 individual ratings**; it is not an unweighted average of the four respondent-group means.
 
-*The applicant interpretation follows manuscript Table 56. The statistical-results narrative labels the same displayed mean of 4.20 “Agree”; see the [research manuscript](https://siex1.github.io/E-Tech/manuscript-viewer.html) for this source discrepancy.*
-
----
-
----
-
-## System Screenshots
-
-### BPLO Staff Dashboard
-
-![BPLO staff dashboard showing application queues and analytics](assets/images/interfaces/bplo-dashboard.webp)
-
-Application queues, quick actions, and analytics; personal details are masked.
-
-### Inspection Scheduling and Evidence
-
-![Inspection scheduling, findings, evidence, and checklist controls](assets/images/interfaces/inspection.webp)
-
-Municipal inspection schedules, findings, evidence upload, and checklist controls; location details are masked.
-
-### Reports and Workflow Analytics
-
-![BPLO reports and workflow analytics interface](assets/images/interfaces/staff-reports.webp)
-
-Reporting periods, workflow summaries, and export controls. The captured chart period contains no records.
+*The applicant interpretation follows manuscript Table 56. The statistical-results narrative labels the same displayed mean of 4.20 “Agree”; see the [research evaluation documentation](docs/RESEARCH_EVALUATION.md) for this source discrepancy.*
 
 ---
 
@@ -197,25 +201,18 @@ This capstone research project was developed and evaluated by undergraduate rese
 
 ---
 
----
-
 ## 🔗 Official Project Links & Deliverables
 
 | Deliverable | Platform / Format | Direct URL |
 | --- | --- | --- |
-| **Capstone Research Website** | GitHub Pages | [https://siex1.github.io/E-Tech/](https://siex1.github.io/E-Tech/) |
-| **Official Research Website Repository** | GitHub | [Siex1/E-Tech](https://github.com/Siex1/E-Tech) |
-| **Capstone Thesis Manuscript** | Watermarked viewer · 350 pages | [Read the E-Tech Research Manuscript](https://siex1.github.io/E-Tech/manuscript-viewer.html) |
 | **Web Application** | Railway deployment address | [https://etech-victoria.up.railway.app/](https://etech-victoria.up.railway.app/) |
+| **Official Main Project Repository** | GitHub | [tiennito/BPLO_System](https://github.com/tiennito/BPLO_System) |
+| **Capstone Research Website** | GitHub Pages | [https://siex1.github.io/E-Tech/](https://siex1.github.io/E-Tech/) |
+| **Research Website Repository** | GitHub | [Siex1/E-Tech](https://github.com/Siex1/E-Tech) |
+| **Capstone Thesis Manuscript** | Watermarked document viewer · 350 pages | [Read the E-Tech Research Manuscript](https://siex1.github.io/E-Tech/manuscript-viewer.html) |
 | **System Demonstration Recordings** | Google Drive | [Open the Demonstration Folder](https://drive.google.com/drive/folders/1NjH7QuwroE372udeUx_dCu-ORaLmgbN7) |
+| **Technical Documentation** | Repository documentation | [Documentation Index](docs/README.md) |
+| **User Documentation** | Role-based manuals | [User Manuals](docs/user-manual/README.md) |
 | **Evaluation Submission Account** | GitHub Account | [`teamccs-git`](https://github.com/teamccs-git) |
 
-The Railway address depends on the separate application's deployment availability. The evaluation account identifies the designated destination; submission acceptance has not been confirmed.
-
----
-
-## Academic Showcase and Privacy
-
-The website presents documented interfaces and aggregate research results. Screenshots use masked personal details, and the manuscript is provided as watermarked page previews. Keep applicant documents, signatures, receipts, credentials, original private PDFs, and private storage links outside the public website.
-
-**E-Tech · Municipality of Victoria, Laguna · LSPU College of Computer Studies**
+The application address depends on the Railway deployment's availability. The research website and manuscript links above use the current **/E-Tech/** address. The evaluation account identifies the designated submission destination; acceptance or collaborator access has not been confirmed.
