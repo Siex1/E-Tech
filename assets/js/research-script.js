@@ -52,39 +52,6 @@
   });
 
 
-  // Lightweight, keyboard-accessible page-preview tabs; no framework runtime.
-  const tabList = document.querySelector('.showcase-tabs');
-  if (tabList) {
-    const tabs = [...tabList.querySelectorAll('[role="tab"]')];
-    const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-    const selectTab = (index, moveFocus = false) => {
-      tabs.forEach((tab, i) => {
-        tab.setAttribute('aria-selected', String(i === index));
-        tab.tabIndex = i === index ? 0 : -1;
-        panels[i].hidden = i !== index;
-      });
-      if (moveFocus) {
-        tabs[index].focus({ preventScroll: true });
-        tabs[index].scrollIntoView({ block: 'nearest', inline: 'nearest' });
-      }
-    };
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => selectTab(index));
-      tab.addEventListener('keydown', event => {
-        let next;
-        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-        else if (event.key === 'Home') next = 0;
-        else if (event.key === 'End') next = tabs.length - 1;
-        else return;
-        event.preventDefault();
-        selectTab(next, true);
-      });
-    });
-    selectTab(0);
-    tabList.hidden = false;
-  }
-
   // Default to user acceptance; preserve both result sections without JavaScript.
   const resultsSection = document.getElementById('results');
   const resultsTabList = resultsSection?.querySelector('.results-tabs');
