@@ -1,7 +1,7 @@
 /* Shared e-Tech design: municipal greens, clear type, and purposeful surfaces. */
-@font-face{font-family:Ubuntu;src:url('assets/fonts/Ubuntu-R.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:Ubuntu;src:url('assets/fonts/Ubuntu-M.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:Ubuntu;src:url('assets/fonts/Ubuntu-B.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:Ubuntu;src:url('../fonts/Ubuntu-R.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Ubuntu;src:url('../fonts/Ubuntu-M.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Ubuntu;src:url('../fonts/Ubuntu-B.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
 :root{--design-forest:#153e2e;--design-paper:#f2f3e8;--design-sage:#dbe7d3;--design-sand:#e8e4cf;--design-ink:#193e2c;--design-muted:#485f47;--focus-color:#a36e12}
 html{scrollbar-color:#728e6c #e8eedf;scrollbar-width:thin}
 ::selection{background:#d8bb75;color:#123a28}
